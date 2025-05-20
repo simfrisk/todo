@@ -1,1 +1,32 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #262626;
+  margin: 20px;
+}
+
+@layer base {
+
+  h2 {
+    @apply text-xl font-semibold
+  }
+
+  h3 {
+    @apply text-lg font-semibold
+  }
+
+  p {
+    @apply text-sm text-gray-400
+  }
+}
+
+@layer components {
+
+  .card-component {
+    @apply h-24 bg-white my-4 rounded-xl text-neutral-800 flex items-center px-4
+  }
+}
