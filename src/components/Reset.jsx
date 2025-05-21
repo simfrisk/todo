@@ -1,7 +1,7 @@
 export const Reset = () => {
   return (
     <>
-      <h2>Reset</h2>
+      <h2 className="primary-text primary-text-hover">Reset</h2>
     </>
   )
 };

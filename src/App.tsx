@@ -9,7 +9,7 @@ export const App = () => {
 
   return (
     <div>
-      <div className="flex justify-between">
+      <div className="flex justify-between max-w-150 m-auto">
         <BurgerMenu />
         <CurrentList />
       </div>
@@ -18,7 +18,7 @@ export const App = () => {
       <Card />
       <Card />
       <AddCardBtn />
-      <div className="flex justify-between fixed bottom-0 right-5 left-4 z-20 text-white p-4 bg-darkgray">
+      <div className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-20 p-4 bg-white dark:bg-darkgray">
         <Reset />
         <CheckAll />
       </div>

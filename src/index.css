@@ -5,8 +5,12 @@
 }
 
 body {
-  background-color: #292929;
+  background-color: #F5F5F5;
   margin: 20px;
+}
+
+body.dark {
+  background-color: #292929;
 }
 
 @layer base {
@@ -24,10 +28,29 @@ body {
   }
 }
 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer components {
 
   .card-component {
-    @apply h-24 bg-white my-4 rounded-xl text-darkgray flex items-center px-4 mx-auto max-w-150
+    @apply h-24 bg-darkgray dark:bg-white text-white dark:text-darkgray my-4 rounded-xl flex items-center px-4 mx-auto max-w-150;
+  }
+
+  .primary-text {
+    @apply text-darkgray dark:text-white;
+  }
+
+  .primary-text-hover {
+    @apply hover:text-lightgray hover:scale-110 transition duration-300;
+  }
+
+  .secondary-text {
+    @apply text-darkgray;
+  }
+
+  .secondary-text-hover {
+    @apply text-lightgray;
   }
 }
 
