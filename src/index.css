@@ -35,5 +35,6 @@ body {
 @theme {
   --color-darkgray: #292929;
   --color-lightgray: #616161;
+  --color-superlightgray: #c6c6c6;
   --color-white: #F5F5F5;
 }
