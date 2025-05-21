@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #262626;
+  background-color: #292929;
   margin: 20px;
 }
 
@@ -20,13 +20,20 @@ body {
   }
 
   p {
-    @apply text-sm text-gray-400
+    @apply text-sm text-lightgray
   }
 }
 
 @layer components {
 
   .card-component {
-    @apply h-24 bg-white my-4 rounded-xl text-neutral-800 flex items-center px-4
+    @apply h-24 bg-white my-4 rounded-xl text-darkgray flex items-center px-4 mx-auto max-w-150
   }
+}
+
+
+@theme {
+  --color-darkgray: #292929;
+  --color-lightgray: #616161;
+  --color-white: #F5F5F5;
 }

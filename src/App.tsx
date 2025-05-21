@@ -17,13 +17,8 @@ export const App = () => {
       <Card />
       <Card />
       <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
       <AddCardBtn />
-      <div className="flex justify-between text-white fixed bottom-0 right-5 left-4 z-20 text-white p-4 bg-neutral-800">
+      <div className="flex justify-between fixed bottom-0 right-5 left-4 z-20 text-white p-4 bg-darkgray">
         <Reset />
         <CheckAll />
       </div>
