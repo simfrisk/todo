@@ -2,7 +2,7 @@ import { Item } from "./Item"
 import { CheckBox } from "./CheckBox"
 import { CheckStore } from "../store/CheckStore"
 
-export const Card = () => {
+export const Card = ({ title, description }) => {
 
   const { isChecked } = CheckStore()
   const bgColor = isChecked ? "bg-lightgray text-white line-through" : "";
@@ -10,7 +10,7 @@ export const Card = () => {
   return (
     <div className={`card-component card ${bgColor} hover:bg-superlightgray hover:scale-102 transition duration-300
 `}>
-      <Item></Item>
+      <Item title={title} description={description}></Item>
       <CheckBox></CheckBox>
     </div>
   )
