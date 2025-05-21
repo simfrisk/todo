@@ -9,7 +9,9 @@ import { Test } from "./components/test"
 import { CardStore } from "./store/CardStore"
 
 export const App = () => {
+
   const cards = CardStore((state) => state.cards);
+
   return (
     <div>
       <div className="flex justify-between max-w-150 m-auto">
@@ -17,7 +19,12 @@ export const App = () => {
         <CurrentList />
       </div>
       {cards.map((card, index) => (
-        <Card key={index} title={card.title} description={card.description} />
+        <Card
+          key={index}
+          index={index}
+          title={card.title}
+          description={card.description}
+        />
       ))}
       <NewCard />
       <div className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-20 p-4 bg-white dark:bg-darkgray">

@@ -17,9 +17,7 @@ export const NewCard = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <p className="border-darkgray">tit, {title}</p>
-        <p className="border-darkgray">des, {description}</p>
+      <form className=" max-w-150 m-auto" onSubmit={handleSubmit}>
         <fieldset className="primary-text">
           <label>
             <p>Title</p>
@@ -27,13 +25,13 @@ export const NewCard = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="border border-darkgray" />
+              className="border border-darkgray dark:border-lightgray py-1 px-3" />
             <p>Description</p>
             <input
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="border border-darkgray" />
+              className="border border-darkgray dark:border-lightgray py-1 px-3" />
           </label>
           <br />
           <button
