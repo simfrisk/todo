@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CardStore } from "../store/CardStore";
+import { Card } from "./Card";
 
 export const NewCard = () => {
   const [title, setTitle] = useState("")

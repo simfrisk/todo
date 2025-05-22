@@ -5,8 +5,8 @@ import { CurrentList } from "./components/CurrentList"
 import { Reset } from "./components/Reset"
 import { CheckAll } from "./components/CheckAll"
 import { NewCard } from "./components/NewCard"
-import { Test } from "./components/test"
 import { CardStore } from "./store/CardStore"
+import { AddCard } from "./components/addCard"
 
 export const App = () => {
 
@@ -26,7 +26,8 @@ export const App = () => {
           description={card.description}
         />
       ))}
-      <NewCard />
+      <AddCard />
+      <AddCardBtn />
       <div className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-20 p-4 bg-white dark:bg-darkgray">
         <Reset />
         <CheckAll />
