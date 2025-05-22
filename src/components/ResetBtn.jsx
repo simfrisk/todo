@@ -1,16 +1,13 @@
 import { CardStore } from "../store/CardStore";
 
 export const ResetBtn = () => {
-  const reset = CardStore((state) => state.deleteCard);
+  const reset = CardStore((state) => state.reset);
 
-  const resetHandler = () => {
-    reset();
-  };
 
   return (
     <>
       <h2
-        onClick={resetHandler}
+        onClick={reset}
         className="primary-text primary-text-hover">
         Reset
       </h2>
