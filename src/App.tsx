@@ -27,7 +27,7 @@ export const App = () => {
         />
       ))}
       <AddCard />
-      <AddCardBtn />
+      {/* <AddCardBtn /> */}
       <div className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-20 p-4 bg-white dark:bg-darkgray">
         <Reset />
         <CheckAll />

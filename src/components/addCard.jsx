@@ -1,11 +1,26 @@
 import { useState } from "react";
 import { CardStore } from "../store/CardStore";
 import { Card } from "./Card";
+import { AddCardBtn } from "./AddCardBtn";
 
 export const AddCard = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
+  const [isVisible, setIsVisible] = useState("block")
+  const [isVisible2, setIsVisible2] = useState("hidden")
   const addTodo = CardStore((state) => state.addTodo)
+
+
+  const toggleVisibility = () => {
+    if (isVisible === "block") {
+      setIsVisible("hidden")
+      setIsVisible2("block")
+
+    } else {
+      setIsVisible("block")
+      setIsVisible2("hidden")
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -13,11 +28,13 @@ export const AddCard = () => {
       addTodo({ title, description })
       setDescription("")
       setTitle("")
+      toggleVisibility()
     }
   }
   return (
-    <>
-      <form className="card-component" onSubmit={handleSubmit}>
+    <div className="card-component relative">
+      <h2 onClick={toggleVisibility} class={`secondary-text primary-text-hover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 ${isVisible}`}>Add</h2>
+      <form onSubmit={handleSubmit} className={isVisible2}>
         <fieldset className="primary-text flex flex-row justify-between items-start gap-4 w-full">
           <div className="flex flex-col flex-1 gap-2">
             <label>
@@ -44,6 +61,6 @@ export const AddCard = () => {
       </form>
 
 
-    </>
+    </div>
   );
 }
