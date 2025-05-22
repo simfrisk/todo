@@ -32,18 +32,59 @@ export const AddCard = () => {
     }
   }
   return (
-    <div className="card-component relative">
-      <h2 onClick={toggleVisibility} class={`secondary-text primary-text-hover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 ${isVisible}`}>Add</h2>
-      <form onSubmit={handleSubmit} className={isVisible2}>
-        <fieldset className="primary-text flex flex-row justify-between items-start gap-4 w-full">
-          <div className="flex flex-col flex-1 gap-2">
+    <div className="
+    card-component 
+    relative
+    ">
+      <h2
+        onClick={toggleVisibility}
+        class={`
+        secondary-text 
+        primary-text-hover 
+        absolute 
+        top-1/2 
+        left-1/2 
+        -translate-x-1/2 
+        -translate-y-1/2 
+        z-50 
+        ${isVisible}
+        `}>Add</h2>
+      <form
+        onSubmit={handleSubmit}
+        className={`
+          ${isVisible2} 
+        w-full 
+        h-full`}>
+        <fieldset className="
+        primary-text 
+        flex 
+        items-center
+        justify-center
+        gap-8 
+        w-full 
+        h-full
+       ">
+          <div className="
+          flex 
+          flex-col 
+          flex-1 
+          gap-2">
             <label>
               <input
                 type="text"
                 placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="secondary-text border-b border-lightgray dark:border-lightgray py-1 px-3 placeholder:text-white dark:placeholder:text-darkgray w-full" />
+                className="
+                secondary-text 
+                border-b 
+                border-lightgray 
+                dark:border-lightgray 
+                py-1 
+                px-3 
+                placeholder:text-white 
+                dark:placeholder:text-darkgray 
+                w-full" />
             </label>
             <label>
               <input
@@ -51,12 +92,26 @@ export const AddCard = () => {
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="secondary-text border-b border-lightgray dark:border-lightgray py-1 px-3 placeholder:text-white dark:placeholder:text-darkgray w-full" />
+                className="secondary-text 
+                border-b 
+                border-lightgray 
+                dark:border-lightgray 
+                py-1 
+                px-3 
+                placeholder:text-white 
+                dark:placeholder:text-darkgray 
+                w-full" />
             </label>
           </div>
           <button
             type="submit"
-            className="primary-text-hover rounded-md border-darkgray p-2 my-5 bg-lightgray">Submit</button>
+            className="
+            primary-text-hover 
+            rounded-md 
+            border-darkgray 
+            p-2 my-5 
+            bg-lightgray
+            ">Submit</button>
         </fieldset>
       </form>
 

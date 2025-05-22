@@ -34,7 +34,7 @@ body.dark {
 @layer components {
 
   .card-component {
-    @apply h-24 bg-darkgray dark:bg-white text-white dark:text-darkgray my-4 rounded-xl flex items-center px-4 mx-auto max-w-150 cursor-pointer;
+    @apply h-24 bg-darkgray dark:bg-white text-white dark:text-darkgray my-4 rounded-xl px-10 mx-auto max-w-150 cursor-pointer;
   }
 
   .primary-text {

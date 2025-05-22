@@ -12,4 +12,14 @@ export const CardStore = create((set) => ({
       updatedCards[index].isChecked = !updatedCards[index].isChecked;
       return { cards: updatedCards };
     }),
+  toggleAllCheckBox: () =>
+    set((state) => {
+      const allChecked = state.cards.every((card) => card.isChecked);
+      const updatedCards = state.cards.map((card) => ({
+        ...card,
+        isChecked: !allChecked,
+      }));
+      return { cards: updatedCards };
+    }),
+  reset: () => set({ cards: [] }),
 }));
