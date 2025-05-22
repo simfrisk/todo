@@ -1,7 +1,7 @@
 import { CardStore } from "../store/CardStore";
 
 export const ResetBtn = () => {
-  const reset = CardStore((state) => state.reset);
+  const reset = CardStore((state) => state.deleteCard);
 
   const resetHandler = () => {
     reset();

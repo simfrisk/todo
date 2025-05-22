@@ -1,6 +1,7 @@
 import { Item } from "./Item"
 import { CheckBox } from "./CheckBox"
 import { CardStore } from "../store/CardStore";
+import { RemoveBtn } from "./RemoveBtn";
 
 export const Card = ({ title, description, index }) => {
   const { cards, toggleCheckBox } = CardStore();
@@ -26,6 +27,7 @@ export const Card = ({ title, description, index }) => {
       <CheckBox
         isChecked={isChecked}
         onToggle={() => toggleCheckBox(index)} />
+      <RemoveBtn index={index} />
     </div>
   );
 }
