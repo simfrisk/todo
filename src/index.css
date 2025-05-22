@@ -24,7 +24,7 @@ body.dark {
   }
 
   p {
-    @apply text-sm text-lightgray
+    @apply text-sm
   }
 }
 
