@@ -7,6 +7,7 @@ import { ResetBtn } from "./components/ResetBtn"
 import { CheckAll } from "./components/CheckAll"
 import { AddCard } from "./components/addCard"
 import { Count } from "./components/Count"
+import { WelcomeMessage } from "./components/WelcomeMessage"
 
 
 export const App = () => {
@@ -19,6 +20,7 @@ export const App = () => {
         <CurrentList />
       </header>
       <main>
+        <WelcomeMessage />
         {cards.map((card, index) => (
           <Card
             key={index}

@@ -15,11 +15,12 @@ interface CardStoreType {
   toggleDetails: (index: number) => void
   deleteCard: (index: number) => void
   reset: () => void
+  isEmpty: () => boolean;
 
 
 }
 
-export const CardStore = create<CardStoreType>((set) => {
+export const CardStore = create<CardStoreType>((set, get) => {
   const savedCards: CardType[] = JSON.parse(localStorage.getItem("cards") || "[]");
 
   return {
@@ -85,5 +86,10 @@ export const CardStore = create<CardStoreType>((set) => {
       localStorage.removeItem("cards");
       set({ cards: [] });
     },
+
+    isEmpty: () => {
+      const state = get();
+      return state.cards.length === 0;
+    }
   };
 });
