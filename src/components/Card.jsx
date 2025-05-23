@@ -2,27 +2,32 @@ import { Item } from "./Item"
 import { CheckBox } from "./CheckBox"
 import { CardStore } from "../store/CardStore";
 import { RemoveBtn } from "./RemoveBtn";
-import { SelectedCardStore } from "../store/SelectedCardStore";
 
 export const Card = ({ title, description, index }) => {
-  const { cards, toggleCheckBox } = CardStore();
-  const { toggleDetails } = SelectedCardStore()
-  const isChecked = cards[index]?.isChecked;
+  const { cards, toggleCheckBox, toggleDetails } = CardStore();
+
+  const card = cards[index];
+  const isChecked = card?.isChecked;
+  const showDetails = card?.showDetails;
+
+  const detailStyle = showDetails ? "border border-amber-600" : "";
   const bgColor = isChecked ? "bg-lightgray text-white line-through" : "";
 
   return (
     <div
-      onClick={toggleDetails}
+      onClick={() => toggleDetails(index)}
       className={`
         card-component
         flex
         items-center
         justify-center
         ${bgColor} 
+        ${detailStyle}
         hover:bg-superlightgray 
         hover:scale-102 
         transition 
-        duration-300`}>
+        duration-300
+      `}>
       <Item
         title={title}
         description={description}

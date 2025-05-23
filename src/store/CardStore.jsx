@@ -8,7 +8,7 @@ export const CardStore = create((set) => {
 
     addTodo: (newCard) =>
       set((state) => {
-        const updatedCards = [...state.cards, { ...newCard, isChecked: false }];
+        const updatedCards = [...state.cards, { ...newCard, isChecked: false, showDetails: false }];
         localStorage.setItem("cards", JSON.stringify(updatedCards));
         return { cards: updatedCards };
       }),
@@ -28,6 +28,14 @@ export const CardStore = create((set) => {
           ...card,
           isChecked: !allChecked,
         }));
+        localStorage.setItem("cards", JSON.stringify(updatedCards));
+        return { cards: updatedCards };
+      }),
+
+    toggleDetails: (index) =>
+      set((state) => {
+        const updatedCards = [...state.cards];
+        updatedCards[index].showDetails = !updatedCards[index].showDetails;
         localStorage.setItem("cards", JSON.stringify(updatedCards));
         return { cards: updatedCards };
       }),
