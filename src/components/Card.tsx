@@ -19,7 +19,7 @@ export const Card = ({ title, description, index }: CardProps) => {
   const bgColor = isChecked ? "bg-lightgray text-white line-through" : "";
 
   return (
-    <div
+    <article
       onClick={() => toggleDetails(index)}
       className={`
         card-component
@@ -43,6 +43,6 @@ export const Card = ({ title, description, index }: CardProps) => {
         onToggle={() => toggleCheckBox(index)} />
       <RemoveBtn
         index={index} />
-    </div>
+    </article>
   );
 }
