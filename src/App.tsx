@@ -8,6 +8,7 @@ import { CheckAll } from "./components/CheckAll"
 import { AddCard } from "./components/addCard"
 import { Count } from "./components/Count"
 import { WelcomeMessage } from "./components/WelcomeMessage"
+import { Menu } from "./components/nav/menu"
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
 
   return (
     <div>
+      <Menu />
       <header className="flex justify-between max-w-150 m-auto mb-10">
         <BurgerMenu />
         <CurrentList />
@@ -30,7 +32,7 @@ export const App = () => {
           />
         ))}
         <AddCard />
-        <footer className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-20 p-4 bg-white dark:bg-darkgray">
+        <footer className="flex justify-between max-w-150 m-auto fixed bottom-0 right-5 left-4 z-10 p-4 bg-white dark:bg-darkgray">
           <ResetBtn />
           <Count />
           <CheckAll />
