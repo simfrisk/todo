@@ -1,15 +1,16 @@
+import { CardStore } from "./store/CardStore"
+import { CardType } from "./store/CardStore"
 import { Card } from "./components/Card"
 import { BurgerMenu } from "./components/BurgerMenu"
 import { CurrentList } from "./components/CurrentList"
 import { ResetBtn } from "./components/ResetBtn"
 import { CheckAll } from "./components/CheckAll"
-import { CardStore } from "./store/CardStore"
 import { AddCard } from "./components/addCard"
 import { Count } from "./components/Count"
 
-export const App = () => {
 
-  const cards = CardStore((state) => state.cards);
+export const App = () => {
+  const cards: CardType[] = CardStore((state) => state.cards);
 
   return (
     <div>

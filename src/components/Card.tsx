@@ -1,16 +1,21 @@
-import { Item } from "./Item"
-import { CheckBox } from "./CheckBox"
+import { CardType } from "../store/CardStore";
+import { Item } from "./Item";
+import { CheckBox } from "./CheckBox";
 import { CardStore } from "../store/CardStore";
 import { RemoveBtn } from "./RemoveBtn";
 
-export const Card = ({ title, description, index }) => {
+interface CardProps extends Pick<CardType, "title" | "description"> {
+  index: number;
+}
+
+export const Card = ({ title, description, index }: CardProps) => {
   const { cards, toggleCheckBox, toggleDetails } = CardStore();
 
   const card = cards[index];
   const isChecked = card?.isChecked;
   const showDetails = card?.showDetails;
 
-  const detailStyle = showDetails ? "border border-amber-600" : "";
+  const detailStyle = showDetails ? "border-2 border-rose-300 scale-103" : "";
   const bgColor = isChecked ? "bg-lightgray text-white line-through" : "";
 
   return (
@@ -18,6 +23,7 @@ export const Card = ({ title, description, index }) => {
       onClick={() => toggleDetails(index)}
       className={`
         card-component
+        relative
         flex
         items-center
         justify-center
@@ -35,7 +41,8 @@ export const Card = ({ title, description, index }) => {
       <CheckBox
         isChecked={isChecked}
         onToggle={() => toggleCheckBox(index)} />
-      <RemoveBtn index={index} />
+      <RemoveBtn
+        index={index} />
     </div>
   );
 }

@@ -1,7 +1,12 @@
 import { create } from "zustand";
 
-export const DarkModeStore = create((set) => {
-  const savedDarkMode = JSON.parse(localStorage.getItem("isDarkMode")) || false;
+interface DarkModeStoreType {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+export const DarkModeStore = create<DarkModeStoreType>((set) => {
+  const savedDarkMode = JSON.parse(localStorage.getItem("isDarkMode") || "false") as boolean
   document.body.classList.toggle("dark", savedDarkMode);
 
   return {
@@ -15,3 +20,4 @@ export const DarkModeStore = create((set) => {
       }),
   };
 });
+
