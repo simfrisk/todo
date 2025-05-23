@@ -12,7 +12,10 @@ export const CheckBox = ({ isChecked, onToggle }) => {
         border 
         border-darkgray`}>
       <div
-        onClick={onToggle}
+        onClick={(e) => {
+          e.stopPropagation(); // Prevents card's onClick from firing
+          onToggle();
+        }}
         className={`
           absolute 
           top-1/2 
