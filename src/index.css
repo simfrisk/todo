@@ -26,6 +26,10 @@ body.dark {
   p {
     @apply text-sm
   }
+
+  button {
+    @apply text-xl font-semibold
+  }
 }
 
 
@@ -50,7 +54,8 @@ body.dark {
   }
 
   .secondary-text-hover {
-    @apply text-lightgray;
+    @apply text-white hover:scale-110 transition duration-300 cursor-pointer;
+
   }
 }
 

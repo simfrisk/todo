@@ -6,11 +6,11 @@ export const ResetBtn = () => {
 
   return (
     <>
-      <h2
+      <button
         onClick={reset}
         className="primary-text primary-text-hover">
         Reset
-      </h2>
+      </button>
     </>
   );
 };

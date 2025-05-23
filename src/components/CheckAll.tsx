@@ -10,11 +10,11 @@ export const CheckAll = () => {
 
   return (
     <>
-      <h2 onClick={checkAllHandler}
+      <button onClick={checkAllHandler}
         className="
           primary-text 
           primary-text-hover"
-      >✓ All</h2>
+      >✓ All</button>
     </>
   )
 };

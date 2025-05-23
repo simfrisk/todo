@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { CardStore } from "../store/CardStore";
-import { Card } from "./Card";
-import { AddCardBtn } from "./AddCardBtn";
 
 export const AddCard = () => {
   const [title, setTitle] = useState("")
@@ -36,8 +34,9 @@ export const AddCard = () => {
     h-24 
     relative
     ">
-      <h2
+      <button
         onClick={toggleVisibility}
+        aria-label="Add a new task"
         className={`
         primary-text 
         primary-text-hover 
@@ -48,7 +47,7 @@ export const AddCard = () => {
         -translate-y-1/2 
         z-50 
         ${isVisible}
-        `}>Add</h2>
+        `}>Add</button>
       <div
         className=
         {`${isVisible2} 
@@ -109,12 +108,13 @@ export const AddCard = () => {
             <button
               type="submit"
               className="
-            primary-text-hover 
+              primary-text 
+            secondary-text-hover
             rounded-md 
             border-darkgray 
-            p-2 my-5 
+            py-2 px-4 my-5 
             bg-lightgray
-            ">Submit</button>
+            ">Add</button>
           </fieldset>
         </form>
 
