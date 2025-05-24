@@ -18,18 +18,16 @@ export const RemoveBtn = ({ index }: RemoveBtnProps) => {
       onClick={removeHandler}
       className={`
         ${detailStyle}
-        absolute
-        top-0
-        right-0
-        text-red-600
-        text-2xl
-        px-3
+        bg-red-400
+        text-base
+        px-5
         py-1 
         hover:scale-110
         rounded-full 
-        mx-2`}
+        mx-2
+        `}
     >
-      x
+      Delete
     </button>
   );
 };

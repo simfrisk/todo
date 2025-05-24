@@ -23,10 +23,9 @@ export const Card = ({ title, description, index }: CardProps) => {
       onClick={() => toggleDetails(index)}
       className={`
         card-component
-        relative
         flex
         items-center
-        justify-center
+        justify-between
         ${bgColor} 
         ${detailStyle}
         hover:bg-superlightgray 
@@ -40,7 +39,8 @@ export const Card = ({ title, description, index }: CardProps) => {
         isChecked={isChecked} />
       <CheckBox
         isChecked={isChecked}
-        onToggle={() => toggleCheckBox(index)} />
+        onToggle={() => toggleCheckBox(index)}
+        showDetails={showDetails}/>
       <RemoveBtn
         index={index} />
     </article>

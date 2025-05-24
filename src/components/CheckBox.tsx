@@ -1,9 +1,20 @@
-export const CheckBox = ({ isChecked, onToggle }) => {
+import { CardStore } from "../store/CardStore";
+
+interface CheckBoxProps {
+isChecked: boolean
+onToggle: () => void
+showDetails: boolean; 
+}
+
+export const CheckBox: React.FC<CheckBoxProps> = ({ isChecked, onToggle, showDetails }) => {
   const bgColor = isChecked ? "bg-darkgray" : "bg-white";
+
+  const checkVisibility = showDetails ? "hidden" : "block"
 
   return (
     <div
       className={`
+        ${checkVisibility}
         relative 
         w-8 
         h-8 
@@ -22,6 +33,7 @@ export const CheckBox = ({ isChecked, onToggle }) => {
           left-1/2 
           w-6 h-6 
           rounded-full 
+          ${checkVisibility}
           ${bgColor} 
           hover:bg-darkgray 
           -translate-x-1/2 
