@@ -43,21 +43,21 @@ export const Menu = () => {
             secondary-text
             secondary-text-hover
             mb-10"
-            >List 1: in prgress</button>
+            >List 1: in progress</button>
             <button
               // onClick={}
               className="
             secondary-text
             secondary-text-hover
             mb-10"
-            >List 2: in prgress</button>
+            >List 2: in progress</button>
             <button
               // onClick={}
               className="
             secondary-text
             secondary-text-hover
             mb-10"
-            >List 3: in prgress</button>
+            >List 3: in progress</button>
           </div>
         </div>
 
