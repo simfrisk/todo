@@ -1,5 +1,5 @@
 export const Item = ({ title, description, isChecked }) => {
-  const textStyle = isChecked ? "line-through text-darkgray" : "";
+  const textStyle = isChecked ? "line-through text-neutral-300" : "";
 
   return (
     <div className="flex flex-col justify-center">

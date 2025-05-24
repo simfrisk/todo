@@ -4,7 +4,9 @@ import { DarkModeStore } from "../../store/DarkModeStore";
 export const Menu = () => {
 
   const { isOpen } = menuStore()
-  const { toggleDarkMode } = DarkModeStore()
+  const { toggleDarkMode, isDarkMode } = DarkModeStore()
+
+  const toggleText = isDarkMode ? "Light Mode" : "Dark Mode"
 
   return (
     <>
@@ -26,7 +28,7 @@ export const Menu = () => {
             secondary-text
             secondary-text-hover
             "
-          >Dark Mode</button>
+          >{toggleText}</button>
           <hr
             className="my-10" />
           <div

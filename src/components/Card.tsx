@@ -16,7 +16,7 @@ export const Card = ({ title, description, index }: CardProps) => {
   const showDetails = card?.showDetails;
 
   const detailStyle = showDetails ? "border-2 border-rose-300 scale-103" : "";
-  const bgColor = isChecked ? "bg-lightgray text-white line-through" : "";
+  const bgColor = isChecked ? "bg-lightgray text-white" : "";
 
   return (
     <article
