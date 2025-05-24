@@ -23,12 +23,15 @@ export const Card = ({ title, description, index }: CardProps) => {
       onClick={() => toggleDetails(index)}
       className={`
         card-component
+        border-2
+        border-transparent
         flex
         items-center
         justify-between
         ${bgColor} 
         ${detailStyle}
-        hover:bg-superlightgray 
+        hover:border-black
+        dark:hover:border-white
         hover:scale-102 
         transition 
         duration-300
